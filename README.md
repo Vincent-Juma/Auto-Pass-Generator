@@ -37,8 +37,8 @@ This will enable users to:
 ### Cloning
 * In your terminal:
         
-        $ git clone https://github.com/Vincent-Juma/Auto-Pass/
-        $ cd Password-Locker
+        $ git clone https://github.com/Vincent-Juma/Auto-Pass-Generator.git
+        $ cd Auto-Pass-Generator
 
 ## Running the Application
 * To run the application, in your terminal:
