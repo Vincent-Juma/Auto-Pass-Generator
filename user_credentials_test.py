@@ -63,9 +63,9 @@ class TestCredentials(unittest.TestCase):
 		'''
 		Test to if check the initialization/creation of credential instances is properly done
 		'''
-		self.assertEqual(self.new_credential.user_name,'Mary')
+		self.assertEqual(self.new_credential.user_name,'Vincent')
 		self.assertEqual(self.new_credential.site_name,'Facebook')
-		self.assertEqual(self.new_credential.account_name,'maryjoe')
+		self.assertEqual(self.new_credential.account_name,'Vincent Juma')
 		self.assertEqual(self.new_credential.password,'pswd100')
 
 	def test_save_credentials(self):
@@ -73,17 +73,17 @@ class TestCredentials(unittest.TestCase):
 		Test to check if the new credential info is saved into the credentials list
 		'''
 		self.new_credential.save_credentials()
-		twitter = Credential('Jane','Twitter','maryjoe','pswd100')
+		twitter = Credential('Jane','Twitter','VINCENTJUMA1','Ogatweet')
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
 
-	# def test_generate_password(self):
-	# 	'''
-	# 	Test to check if the generate password generates 8 character long alphanumeric numbers
-	# 	'''
-	# 	self.twitter = Credential('Twitter','maryjoe','')
-	# 	self.twitter.password = generate_password()
-	# 	self.assertEqual()
+	def test_generate_password(self):
+		'''
+		Test to check if the generate password generates 8 character long alphanumeric numbers
+		'''
+		self.twitter = Credential('Twitter','VINCENTJUMA1','')
+		self.twitter.password = generate_password()
+		self.assertEqual()
 
 	def tearDown(self):
 		'''
