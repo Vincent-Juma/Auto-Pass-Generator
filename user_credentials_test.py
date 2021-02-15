@@ -19,9 +19,9 @@ class TestUser(unittest.TestCase):
 		'''
 		Test to if check the initialization/creation of user instances is properly done
 		'''
-		self.assertEqual(self.new_user.first_name,'Mary')
-		self.assertEqual(self.new_user.last_name,'Ng\'ang\'a')
-		self.assertEqual(self.new_user.password,'pswd100')
+		self.assertEqual(self.new_user.first_name,'Vincent')
+		self.assertEqual(self.new_user.last_name,'Juma')
+		self.assertEqual(self.new_user.password,'Careertip#64')
 
 	def test_save_user(self):
 		'''
@@ -41,9 +41,9 @@ class TestCredentials(unittest.TestCase):
 		'''
 		Function to test whether the login in function check_user works as expected
 		'''
-		self.new_user = User('Mary','Ng\'ang\'a','pswd100')
+		self.new_user = User('Vincent','Juma','Careertip#64')
 		self.new_user.save_user()
-		user2 = User('Ken','Ng\'ang\'a','pswd100')
+		user2 = User('Ken','Juma','Careertip#64')
 		user2.save_user()
 
 		for user in User.users_list:
@@ -57,7 +57,7 @@ class TestCredentials(unittest.TestCase):
 		'''
 		Function to create an account's credentials before each test
 		'''
-		self.new_credential = Credential('Mary','Facebook','maryjoe','pswd100')
+		self.new_credential = Credential('Vincent','Facebook','Vincent Juma','pswd100')
 
 	def test__init__(self):
 		'''
@@ -73,7 +73,7 @@ class TestCredentials(unittest.TestCase):
 		Test to check if the new credential info is saved into the credentials list
 		'''
 		self.new_credential.save_credentials()
-		twitter = Credential('Jane','Twitter','VINCENTJUMA1','Ogatweet')
+		twitter = Credential('Vincent','Twitter','VINCENTJUMA1','ogatweet')
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
 
