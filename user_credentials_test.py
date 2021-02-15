@@ -77,13 +77,13 @@ class TestCredentials(unittest.TestCase):
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
 
-	def test_generate_password(self):
-		'''
-		Test to check if the generate password generates 8 character long alphanumeric numbers
-		'''
-		self.twitter = Credential('Twitter','VINCENTJUMA1','')
-		self.twitter.password = generate_password()
-		self.assertEqual()
+	# def test_generate_password(self):
+	# 	'''
+	# 	Test to check if the generate password generates 8 character long alphanumeric numbers
+	# 	'''
+	# 	self.twitter = Credential('Twitter','VINCENTJUMA1','')
+	# 	self.twitter.password = generate_password()
+	# 	self.assertEqual()
 
 	def tearDown(self):
 		'''
@@ -97,9 +97,9 @@ class TestCredentials(unittest.TestCase):
 		Test to check if the display_credentials method, displays the correct credentials.
 		'''
 		self.new_credential.save_credentials()
-		twitter = Credential('Jane','Twitter','maryjoe','pswd100')
+		twitter = Credential('Vincent','Twitter','VINCENTJUMA1','ogatweet')
 		twitter.save_credentials()
-		gmail = Credential('Jane','Gmail','maryjoe','pswd200')
+		gmail = Credential('Vincent','Gmail','Vincent Juma','Careertip#64')
 		gmail.save_credentials()
 		self.assertEqual(len(Credential.display_credentials(twitter.user_name)),2)
 
@@ -108,7 +108,7 @@ class TestCredentials(unittest.TestCase):
 		Test to check if the find_by_site_name method returns the correct credential
 		'''
 		self.new_credential.save_credentials()
-		twitter = Credential('Jane','Twitter','maryjoe','pswd100')
+		twitter = Credential('Vincent','Twitter','VINCENTJUMA1','ogatweet')
 		twitter.save_credentials()
 		credential_exists = Credential.find_by_site_name('Twitter')
 		self.assertEqual(credential_exists,twitter)
@@ -118,7 +118,7 @@ class TestCredentials(unittest.TestCase):
 		Test to check if the copy a credential method copies the correct credential
 		'''
 		self.new_credential.save_credentials()
-		twitter = Credential('Jane','Twitter','VINCENTJUMA1','ogatweet')
+		twitter = Credential('Vincent','Twitter','VINCENTJUMA1','ogatweet')
 		twitter.save_credentials()
 		find_credential = None
 		for credential in Credential.user_credentials_list:
