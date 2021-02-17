@@ -115,7 +115,7 @@ class TestCredentials(unittest.TestCase):
 
 	def test_copy_credential(self):
 		'''
-		Test to check if the copy a credential method copies the correct credential
+		Test to check if the copy a credential method copies the right credentials
 		'''
 		self.new_credential.save_credentials()
 		twitter = Credential('Vincent','Twitter','VINCENTJUMA1','ogatweet')
