@@ -30,9 +30,9 @@ This will enable users to:
 ## SetUp / Installation Requirements
 ### Prerequisites
 * python3.9
-* pip
+* pip3
 * pyperclip
-* xclip
+
 
 ### Cloning
 * In your terminal:
@@ -43,8 +43,7 @@ This will enable users to:
 ## Running the Application
 * To run the application, in your terminal:
 
-        $ chmod +x password_locker.py
-        $ ./password_locker.py
+        $ python3.9 password_locker.py
         
 ## Testing the Application
 * To run the tests for the class file:
